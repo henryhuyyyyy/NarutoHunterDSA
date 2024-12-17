@@ -38,8 +38,6 @@ public class UI {
         if(gp.gameState == gp.playState){drawPlayerLife();}
         //pause state
         if(gp.gameState == gp.pauseState){drawPlayerLife();drawPauseScreen();}
-        //Option State
-//        if(gp.gameState == gp.optionsState){drawOptionsScreen();}
         //Game Over State
         if(gp.gameState == gp.gameOverState){drawGameOverScreen();}
         //End game state
@@ -121,24 +119,7 @@ public class UI {
         int y = gp.screenHeight/2;
         g2.drawString(text, x , y );
     }
-//    public void drawOptionsScreen(){
-//        g2.setColor(Color.white);
-//        g2.setFont(g2.getFont().deriveFont(32f));
-//
-//        //Sub window
-//        int frameX = gp.tileSize*6;
-//        int frameY = gp.tileSize;
-//        int frameWidth = gp.tileSize*8;
-//        int frameHeight = gp.tileSize*10;
-//        drawSubWindow(frameX,frameY,frameWidth,frameHeight);
-//
-//        switch (subState){
-    ////            case 0: options_top(frameX, frameY); break;
-//            case 1:  break;
-//            case 2:  break;
-//        }
-//        gp.keyH.enterPressed = false;
-//    }
+
     public void drawGameOverScreen(){
 
         g2.setColor(new Color(0,0,0,150));
@@ -222,85 +203,7 @@ public class UI {
         }
 
     }
-    //    public void options_top(int frameX, int frameY){
-//        int textX;
-//        int textY;
-//
-//        //Title
-//        String text = "Options";
-//        textX = getXforCenteredText(text);
-//        textY = frameY + gp.tileSize;
-//        g2.drawString(text,textX,textY);
-//
-//        //Music
-//        textX = frameX + gp.tileSize;
-//        textY += gp.tileSize*2;
-//        //textY += gp.tileSize;
-//        g2.drawString("Music", textX, textY);
-//        if(commandNum == 0){
-//            g2.drawString(">",textX - 25,textY);
-//        }
-//
-//        //SE
-//        textY += gp.tileSize;
-//        g2.drawString("SE", textX, textY);
-//        if(commandNum == 1){
-//            g2.drawString(">",textX - 25,textY);
-//        }
-//
-//        //End Game
-//        textY += gp.tileSize;
-//        g2.drawString("End Game", textX, textY);
-//        if(commandNum == 2){
-//            g2.drawString(">",textX - 25,textY);
-//            if(gp.keyH.enterPressed == true){
-//                gp.playSE(7);
-//                subState = 0;
-//                gp.gameState = gp.titleState;
-//                gp.stopMusic();
-//                gp.playMusic(0);
-//                gp.restart();
-//            }
-//        }
-//
-//        //Resume
-//        textY += gp.tileSize*2;
-//        g2.drawString("Resume Game", textX, textY);
-//        if(commandNum == 3){
-//            g2.drawString(">",textX - 25,textY);
-//            if(gp.keyH.enterPressed == true){
-//                gp.gameState = gp.playState;
-//                commandNum = 0;
-//            }
-//        }
-//
-//        //Music Volume
-//        textX = frameX + (int)(gp.tileSize*4.5);
-//        textY = frameY + gp.tileSize*2 + 24;
-//        g2.setStroke(new BasicStroke(3));
-//        g2.drawRect(textX,textY,120,24);
-//        int volumeWidth = 24 * gp.music.volumeScale;
-//        g2.fillRect(textX,textY,volumeWidth,24);
-//
-//        //SE Volume
-//        textY += gp.tileSize;
-//        g2.drawRect(textX,textY,120,24);
-//        volumeWidth = 24 * gp.se.volumeScale;
-//        g2.fillRect(textX,textY,volumeWidth,24);
-//
-//        gp.config.saveConfig();
-//    }
-    // make game full screen
-    public void drawSubWindow(int x, int y, int width, int height) {
-        Color c = new Color(0, 0, 0, 210);
-        g2.setColor(c);
-        g2.fillRoundRect(x, y, width, height, 35, 35);
 
-        c = new Color(255, 255, 255);
-        g2.setColor(c);
-        g2.setStroke(new BasicStroke(5));
-        g2.drawRoundRect(x + 5, y + 5, width - 10, height - 10, 25, 25);
-    }
     public int getXforCenteredText(String text){
         int length = (int)g2.getFontMetrics().getStringBounds(text, g2).getWidth();
         int x = gp.screenWidth/2 - length/2;
