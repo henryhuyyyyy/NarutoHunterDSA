@@ -183,7 +183,6 @@ public class Player extends Entity{
     public void damageGreenSlime(int i){
         if (i != 999) {
             if(gp.slime[i].invincible == false){
-//                gp.playSE(2);
                 gp.slime[i].life -= 1;
                 gp.slime[i].invincible = true;
                 gp.slime[i].dameReact();
@@ -196,7 +195,6 @@ public class Player extends Entity{
     public void damageBat(int i){
         if (i != 999) {
             if(gp.bat[i].invincible == false){
-//                gp.playSE(9);
                 gp.bat[i].life -= 1;
                 gp.bat[i].invincible = true;
                 gp.bat[i].dameReact();
@@ -208,14 +206,12 @@ public class Player extends Entity{
     }
     private void checkIfAttacking() {
         if (gp.keyH.enterPressed) {
-//            gp.playSE(5);
             isAttacking = true;
         }
     }
     public void interactBat(int batIndex){
         if(batIndex != 999){
             if(!invincible){
-//                gp.playSE(1);
                 life -= 1;
                 invincible = true;
             }
@@ -224,7 +220,6 @@ public class Player extends Entity{
     public void interactGreenSlime(int greenSlimeIndex){
         if(greenSlimeIndex != 999){
             if(!invincible){
-//                gp.playSE(1);
                 life -= 1;
                 invincible = true;
             }
