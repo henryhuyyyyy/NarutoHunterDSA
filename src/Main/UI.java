@@ -77,7 +77,7 @@ public class UI {
 
         //title name
         g2.setFont(g2.getFont().deriveFont(Font.BOLD, 70F));
-        String text = "Last Time Adventure";
+        String text = "Naruto Hunter";
         int x = getXforCenteredText(text);
         int y = gp.tileSize*3;
 
