@@ -8,7 +8,7 @@ public class Main {
         window = new JFrame();
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setResizable(false);
-        window.setTitle("Last Time Adventure");
+        window.setTitle("Naruto Hunter Game");
 
         GamePanel gamePanel = new GamePanel();
         window.add(gamePanel);
