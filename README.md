@@ -1,6 +1,8 @@
 # Data Structures & Algorithms (IT013IU)
 ## Project Name: Naruto Hunter Game
-The game was built by Nguyen Binh Phuong Huy & Phan Nguyen Khanh Nguyen
+The game was built by 
+- Nguyen Binh Phuong Huy
+- Phan Nguyen Khanh Nguyen
 
 ### Objective
 The project is designed to recreate a fully playable 2D game, enhanced with several appealing features. Through this game, fundamental concepts of Data Structures and Algorithms (DSA) and the essential implementation of Object - Oriented Programming can be effectively demonstrated and implemented.
@@ -14,8 +16,9 @@ The project is designed to recreate a fully playable 2D game, enhanced with seve
 
 #### Problem detected & How to solve?
 - The IDEA can return `NullExceptionPointer` error when it tries to input picture for player and monster in `Picture` directory.
-**How to solve?**: Refer to `File -> Project Structure -> Modules` and apply **Resourses** for **Picture** directory.
-![Screenshot of Project Structure windows in JetBrains IntelliJ IDEA.](https://drive.google.com/file/d/1ujD-2YspxuCCPXwbH1cJeIej2yoMwDNU/view?usp=drive_link)  
+- **How to solve?**: Refer to `File -> Project Structure -> Modules` and apply **Resourses** for **Picture** directory.
 
 
 
+
+![Screenshot of Project Structure in IntelliJ IDEA](https://github.com/user-attachments/assets/3b65cae4-4270-40b8-a922-ae9b28eec13c)
